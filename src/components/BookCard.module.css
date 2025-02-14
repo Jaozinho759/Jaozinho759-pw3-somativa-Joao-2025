@@ -1,12 +1,33 @@
-img {
-    width: 200px;
-    height: 350px;    
+body {
+display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 250vh; 
+  margin: 0; 
+  background-color: #f0f0f0; 
+
 }
+img {
+  width: 400px;
+  height: 350px;
+  border-radius: 10px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+  }
+  
 
 
 .teste {
-    background-color: beige;
-    padding: 10px;
-    margin-bottom: 20px;
+background-color: #f5f5dc; 
+  padding: 20px; 
+  margin-bottom: 30px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
 
 }
