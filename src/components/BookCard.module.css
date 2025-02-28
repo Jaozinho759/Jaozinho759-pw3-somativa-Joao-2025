@@ -1,33 +1,24 @@
-body {
-display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 250vh; 
-  margin: 0; 
-  background-color: #f0f0f0; 
-
-}
-img {
-  width: 400px;
-  height: 350px;
-  border-radius: 10px; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+.bookCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  width: max-content;
+  padding: 5px;
+  background-color: #DEDEDE;
+  border: 1px solid #CCC;
+  font-family: Helvetica;
 }
 
-img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
-  }
-  
+.titulo{
+  font-size: 12px;
+}
 
+.autor{
+  font-size: 10px;
+}
 
-.teste {
-background-color: #f5f5dc; 
-  padding: 20px; 
-  margin-bottom: 30px; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-
-
+img{
+  width: 80px;
+  border-radius: 5px;
 }

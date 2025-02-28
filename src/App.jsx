@@ -1,20 +1,44 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import './App.css'
 
-import BookCard from './components/BookCard'
+import Container from './components/layout/Container'
 
-import cavernas_aco from './assets/cavernas_aco.jpg'
-import sol_desvelado from './assets/sol_desvelado.jpg'
-import anel from './assets/anel.jpg'
-import fim_da_infancia from './assets/end.jpg'
+/* IMPORTS DOS COMPONENTES DE PÁGINAS */
+import Home from './components/pages/Home'
+import CreateBook from './components/pages/CreateBook'
+import ListBook from './components/pages/ListBook'
 
-import NavBar from './components/Layout/NavBar'
+/* IMPORTAÇÃO DO NAVBAR */
+import NavBar from './components/layout/NavBar'
 
 function App() {
 
   return (
     <>
-      < div >
-      <NavBar />
+    
+      <div>
+
+        <BrowserRouter>
+
+          <Container>
+
+            <Routes>
+
+              <Route path='/' element={<NavBar />}>
+
+                <Route path='/' element={<Home />} />
+                <Route path='/newBook' element={<CreateBook />} />
+                <Route path='/listBook' element={<ListBook />} />
+
+              </Route>
+
+            </Routes>
+
+          </Container>
+
+        </BrowserRouter>
+
       </div>
     </>
   )
