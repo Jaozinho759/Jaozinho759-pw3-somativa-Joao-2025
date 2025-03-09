@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './App.css'
 
-import Container from './components/layout/Container'
+import Container from './components/Layout/Container'
 
 /* IMPORTS DOS COMPONENTES DE PÁGINAS */
 import Home from './components/pages/Home'
