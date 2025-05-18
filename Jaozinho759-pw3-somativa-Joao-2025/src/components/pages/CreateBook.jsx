@@ -25,13 +25,13 @@ const CreateBook = () => {
     }
     //Captura os dados do select
 
-    function handleChangeCategory(event) {
+    const handleChangeCategory = (event) => {
       setBook({...book, category : event.target.options[event.target.selectedIndex].text})
 
     }
 
     //Envio para a API
-    function submit(event) {
+    const submit = (event) => {
       event.preventDefault();
       console.log(book);
 
@@ -39,6 +39,7 @@ const CreateBook = () => {
 
     return (
       <section className={style.create_book_container}>
+
         <h1>CADASTRO DE LIVROS</h1>
 
         <form onSubmit={submit} > 
@@ -48,7 +49,7 @@ const CreateBook = () => {
           name="txt_livro"
           id="txt_livro"
           placeholder="Digite o nome do livro"
-          handlerChange={handleChangebook}
+          action={handleChangebook}
         />
   
         <Input
@@ -56,7 +57,7 @@ const CreateBook = () => {
           name="txt_autor"
           id="txt_autor"
           placeholder="Digite o nome do autor"
-          handlerChange={handleChangebook}
+          action={handleChangebook}
         />
   
         <Input
@@ -64,7 +65,7 @@ const CreateBook = () => {
           name="txt_descricao"
           id="txt_descricao"
           placeholder="Digite a descrição do livro"
-          handlerChange={handleChangebook}
+          action={handleChangebook}
 
         />
 
@@ -74,7 +75,7 @@ const CreateBook = () => {
           name="slc_categoria"
           id="slc_categoria"
           text="Categoria do Livro"
-          HandleChange={handleChangeCategory}
+          action={handleChangeCategory}
         />
   
         <Button

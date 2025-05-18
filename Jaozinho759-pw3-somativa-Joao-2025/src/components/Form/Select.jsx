@@ -8,10 +8,10 @@ import style from './Select.module.css'
  
              <select name={name} id={id} onChange={handleChange}>
                  <option value=''>Selecione uma categoria</option>
-                 <option value=''>Ficcção Cientifica</option>
-                 <option value=''>Fantasia Heroica</option>
-                 <option value=''>Suspense</option>
-                 <option value=''>Terror</option>
+                 <option value='Ficcção Cientifica'>Ficcção Cientifica</option>
+                 <option value='Fantasia Heroica'>Fantasia Heroica</option>
+                 <option value='Suspense'>Suspense</option>
+                 <option value='Terror'>Terror</option>
              </select>
          </div>
  

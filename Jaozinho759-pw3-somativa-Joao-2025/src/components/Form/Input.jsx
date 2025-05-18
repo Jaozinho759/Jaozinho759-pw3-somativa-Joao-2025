@@ -1,7 +1,9 @@
 import styles from "./Input.module.css";
+import { useState } from "react";
  
- function Input({ type, text,  name, id, placeholder, value, handleChange }) {
+ function Input({ type, text,  name, id, placeholder, value, action }) {
  
+
    return (
  
      <div className={styles.form_control}>
@@ -12,7 +14,7 @@ import styles from "./Input.module.css";
          id={id}
          placeholder={placeholder}
          value={value}
-         onChange={handleChange}/>
+         onChange={action}/>
      </div>
  
    );
