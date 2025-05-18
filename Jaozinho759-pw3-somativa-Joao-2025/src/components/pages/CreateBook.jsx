@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useEffect,useState } from "react";
 
 import style from './CreateBook.module.css'
 
@@ -36,6 +36,25 @@ const CreateBook = () => {
       console.log(book);
 
     }
+
+    // Recupera os dados de categoria da APIRest
+
+  useEffect(() => {
+  fetch('http://localhost:5000/listagemCategorias', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+    .then((response) => response.json())
+    .then((categories) => {
+      console.log(categories.data); // Deve mostrar as categorias
+    })
+    .catch((error) => {
+      console.error('Erro ao buscar categorias:', error);
+    });
+}, []);
+
 
     return (
       <section className={style.create_book_container}>

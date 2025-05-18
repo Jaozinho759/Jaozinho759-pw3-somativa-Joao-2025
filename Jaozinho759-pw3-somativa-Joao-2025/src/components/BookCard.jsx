@@ -6,6 +6,7 @@ const BookCard = ({ titulo, autor, imagem }) => {
       <h3>{titulo}</h3>
       <p>{autor}</p>
       <img src={imagem} alt="Capa: As Cavernas de Aço" />
+      <Button label='DETALHE' />
     </div>
   );
 };
