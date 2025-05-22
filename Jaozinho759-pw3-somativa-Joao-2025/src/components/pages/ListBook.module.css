@@ -1,0 +1,9 @@
+.body{
+    text-align: center;
+}
+
+.body h1{
+     margin: 2vh 0;
+     color: white;
+     font-size: 5vh;
+}

@@ -10,7 +10,7 @@ import CreateBook from './components/pages/CreateBook'
 import ListBook from './components/pages/ListBook'
 
 /* IMPORTAÇÃO DO NAVBAR */
-import NavBar from './components/layout/NavBar'
+import NavBar from './components/Layout/NavBar'
 
 function App() {
 
