@@ -1,13 +1,16 @@
 import style from "./Button.module.css"
+import { Link } from 'react-router-dom'
 import { RiInformation2Line as Details } from "react-icons/ri";
 
-function Button({label}) {
+
+const Button = ({ label, router, cod_livro }) => {
 
     return (
-        <div className={style.buttonContainer}>
-            <button><Details className={style.iconDetails} />{label}</button>
+        <div>
+            <Link to={`${router}${cod_livro}`}>
+                <button>{label}</button>
+            </Link>
         </div>
     )
 }
-
 export default Button;
