@@ -21,11 +21,10 @@
 }
 
 .img_book_detail{
-    display: grid;
-    align-items: end;
-    justify-items: end;
-    width: 300px;
+    display: block;
+    width: 200px;
     border-radius: 5px;
+    object-fit: cover; /* opcional: mantém o aspecto da imagem */
 }
 
 .titulo{

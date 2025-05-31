@@ -7,6 +7,7 @@ import Input from "../Form/Input";
 import Select from "../Form/Select";
 import Button from "../Form/Button";
 
+
 const CreateBook = () => {
   const [book, setBook] = useState({});
   const [categories, setCategories] = useState([]);
@@ -42,8 +43,6 @@ const CreateBook = () => {
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': '*',
       },
       body: JSON.stringify(book),
     })
@@ -60,22 +59,21 @@ const CreateBook = () => {
 
   // Busca as categorias da API
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/listagemCategorias', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': '*',
-      },
+  fetch('http://127.0.0.1:5000/listagemCategorias', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((categories) => {
+      setCategories(categories.data);
     })
-      .then((response) => response.json())
-      .then((categories) => {
-        setCategories(categories.data);
-      })
-      .catch((error) => {
-        console.error('Erro ao buscar categorias:', error);
-      });
-  }, []);
+    .catch((error) => {
+      console.error('Erro ao buscar categorias:', error);
+    });
+}, []);
+
 
   return (
     <section className={style.create_book_container}>

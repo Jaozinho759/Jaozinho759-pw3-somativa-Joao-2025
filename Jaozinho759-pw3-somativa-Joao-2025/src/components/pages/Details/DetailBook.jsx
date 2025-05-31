@@ -3,8 +3,13 @@ import { useParams } from 'react-router-dom'
 
 import style from './DetailBook.module.css'
 
+import cavernas from '../../../assets/cavernas_aco.jpg'
+
 
 const DetailBook = () => {
+
+    console.log('Imagem cavernas:', cavernas);
+
 
     /* RECUPERANDO O ID DA URL */
     const {cod_livro} = useParams();
@@ -38,7 +43,7 @@ const DetailBook = () => {
         <div className={style.grid}>
             
             <div className={style.container_img}>
-                <img className={style.img_book_detail} src={cavernas} alt='Capa do livro: As cavernas de aço' />
+                <img className={style.img_book_detail}  alt='Capa do livro: As cavernas de aço' />
             </div>
 
             <div className={style.info}>
@@ -62,6 +67,12 @@ const DetailBook = () => {
                         label='EXCLUIR'
                         router='/deleteBook/'
                         cod_livro={book.cod_livro}
+                    />
+
+                    <Button
+                            label='Voltar'
+                            router='/listBook'
+                            cod_livro={''}
                     />
 
                 </div>

@@ -4,6 +4,8 @@ import Style from './ListBook.module.css'
 
 import BookCard from "../BookCard";
 
+import cavernas from '../.././assets/cavernas_aco.jpg'
+
 import Container from "../Layout/Container";
 
 const ListBook = () => {
@@ -50,7 +52,7 @@ const ListBook = () => {
                         cod_livro={book.cod_livro}
                         nome_livro={book.nome_livro}
                         autor_livro={book.autor_livro}
-                        img_livro
+                        imagem = {cavernas}
                         key={book.cod_livro} />
                 ))
 

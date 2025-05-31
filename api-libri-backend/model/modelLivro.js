@@ -12,7 +12,6 @@ PARAMETROS DO MÉTODO DEFINE
                 TIPO DE DADO DO CAMPO DA TABELA
                 REGRAS DO CAMPO DA TABELA (NULL, NOT NULL, DEFAULT...ETC)
 */
-
 const modeLivro = connection.define(
     'tbl_livro',
     {
@@ -52,6 +51,6 @@ modeLivro.belongsTo(modelCategoria, {
     sourceKey: 'cod_categoria'
 });
 
-// modeLivro.sync({force:true});
+//modeLivro.sync({force:true});
 
 module.exports = modeLivro;

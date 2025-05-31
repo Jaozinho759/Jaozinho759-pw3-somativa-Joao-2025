@@ -9,14 +9,18 @@ import Home from './components/pages/Home'
 import CreateBook from './components/pages/CreateBook'
 import ListBook from './components/pages/ListBook'
 import DetailBook from './components/pages/Details/DetailBook'
-
+import UpdateBooks from './components/pages/UpdateBooks'
+import DeleteBook from './components/pages/DeleteBook'
 /* IMPORTAÇÃO DO NAVBAR */
 import NavBar from './components/Layout/NavBar'
+
+import cavernas from './assets/cavernas_aco.jpg'
 
 function App() {
 
   return (
     <>
+
     
       <div>
 
@@ -27,13 +31,14 @@ function App() {
             <Routes>
 
               <Route path='/' element={<NavBar />}>
-
-                <Route path='/' element={<Home />} />
-                <Route path='/newBook' element={<CreateBook />} />
-                <Route path='/listBook' element={<ListBook />} />
-                <Route path='/detailBook' element={<DetailBook/>} />
-                
+                <Route index element={<Home />} />
+                <Route path='newBook' element={<CreateBook />} />
+                <Route path='listBook' element={<ListBook />} />
+                <Route path='detailBook' element={<DetailBook />} />
+                <Route path='deleteBook/:cod_livro' element={<DeleteBook />} />
+                <Route path='updateBooks' element={<UpdateBooks />} />
               </Route>
+
 
             </Routes>
 
