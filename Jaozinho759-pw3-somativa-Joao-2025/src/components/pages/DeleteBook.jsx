@@ -19,7 +19,7 @@ function DeleteBook() {
             resp => resp.json()
         ).then(
             (data)=>{
-                navigate('/listBook',{state:'LIVRO EXCLUÍDO COM SUCESSO!'});
+                navigate('/newBook',{state:'LIVRO EXCLUÍDO COM SUCESSO!'});
             }
         ).catch(
             err => console.log(err)

@@ -13,7 +13,7 @@ const BookCard = ({ cod_livro, nome_livro, autor_livro, img_livro }) => {
             <img src={img_livro} />
             <Button
                 label='DETALHES'
-                router={`/detailBook/`}
+                router={`/details/`}
                 cod_livro={cod_livro} />
         </div>
 

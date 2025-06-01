@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom'
 
 import style from './DetailBook.module.css'
 
-import cavernas from '../../../assets/cavernas_aco.jpg'
+import cavernas from '../Details/cavernas_aco.jpg'
+
+import Button from '../../Button'
 
 
 const DetailBook = () => {
@@ -13,7 +15,7 @@ const DetailBook = () => {
 
     /* RECUPERANDO O ID DA URL */
     const {cod_livro} = useParams();
-    console.log('ID:' + cod_livro);
+    //console.log('ID:' + cod_livro);
 
     /* CRIA O STATE DE DADOS QUE VAI ARMAZENAR O DEALHE DO LIVRO ESCOLHIDO */
     const[book, setBook] = useState({});
@@ -43,7 +45,7 @@ const DetailBook = () => {
         <div className={style.grid}>
             
             <div className={style.container_img}>
-                <img className={style.img_book_detail}  alt='Capa do livro: As cavernas de aço' />
+                <img className={style.img_book_detail} src={cavernas} alt='Capa do livro: As cavernas de aço' />
             </div>
 
             <div className={style.info}>
