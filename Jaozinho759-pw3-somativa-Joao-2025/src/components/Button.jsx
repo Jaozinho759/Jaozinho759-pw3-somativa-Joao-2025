@@ -1,6 +1,6 @@
 import style from "./Button.module.css"
 import { Link } from 'react-router-dom'
-import { RiInformation2Line as Details } from "react-icons/ri";
+
 
 
 const Button = ({ label, router, cod_livro }) => {

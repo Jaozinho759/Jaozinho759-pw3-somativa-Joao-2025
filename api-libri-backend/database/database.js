@@ -15,7 +15,7 @@ PARAMETROS DO SEQUELIZE
 const connection = new Sequelize(
     'bd_libri_api',
     'root',
-    '',
+    'etecembu@123',
     {
         host: 'localhost',
         port: '3306',
